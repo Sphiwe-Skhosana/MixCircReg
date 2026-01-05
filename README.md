@@ -8,6 +8,7 @@ In this section, we provide a brief description of the code (contained in the ``
 * The ```mix_circ_regression(theta,x1,x2,k,initBeta1,initBeta2,initmu,initlmd,initprop)``` function fits the MixCircReg model using the Expectation-Maximization (EM) algorithm (with the IRLWS for the regression parameters)
 * The ```fit.mix_circ_regression(theta,x1,x2,k,initBeta1,initBeta2,initmu,initlmd,initprop)``` function fit multiple MixCircReg models using the function ```mix_circ_regression(...)``` to initialize the fitting algorithm
 * The ```dir_con_mle(theta,x,weig,initBeta)``` function is used inside of the ```mix_circ_regression``` function to calculate the mean direction ($\mu$) and concentration paramater ($\kappa$) for each component.
+* The ```g(x)``` function is the arctangent link function.
 
 #### Arguments (inputs)
 
