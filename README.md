@@ -9,6 +9,9 @@ In this section, we provide a brief description of the code (contained in the ``
 * The ```fit.mix_circ_regression(theta,x1,x2,k,initBeta1,initBeta2,initmu,initlmd,initprop)``` function fit multiple MixCircReg models using the function ```mix_circ_regression(...)``` to initialize the fitting algorithm
 * The ```dir_con_mle(theta,x,weig,initBeta)``` function is used inside of the ```mix_circ_regression``` function to calculate the mean direction ($\mu$) and concentration paramater ($\kappa$) for each component.
 * The ```g(x)``` function is the arctangent link function.
+* The ```g1(x)``` function is the first derivative of ```g()```
+* The ```g2(x)``` function is the second derivative of ```g()```
+
 
 #### Arguments (inputs)
 
@@ -20,8 +23,8 @@ In this section, we provide a brief description of the code (contained in the ``
   + ```lmd``` is the concentration parameter
   + ```weig``` is an $n-$dimensional vector of weights represented by the responsibilities of each component 
   + ```initBeta``` is the initial parameter value of the overall $\beta$ parameter for each component.
-  + ```initBeta1``` is the initial parameter value of the $\beta$ parameter for the circular (sine-cosine) covariates.
-  + ```initBeta2``` is the initial parameter value of the $\beta$ parameter for the linear covariates.
+  + ```initBeta1``` is a $2q\times k$ matrix of the initial parameter values of the regression parameters for the circular (sine-cosine) covariates.
+  + ```initBeta2``` is a $p\times k$ matrix of the initial parameter values of the regression parameters for the linear covariates.
   + ```initmu``` is a $k-$dimensional initial parameter vector of $\mu$, the mean direction parameter
   + ```initlmd``` is a $k-$dimensional initial parameter vector of $\kappa$, the concentration parameter
   + ```initprop``` is a $k-$dimensional initial parameter vector of $\pi$, the mixing proportion

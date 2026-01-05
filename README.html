@@ -380,6 +380,10 @@ mean direction (<span class="math inline">\(\mu\)</span>) and
 concentration paramater (<span class="math inline">\(\kappa\)</span>)
 for each component.</li>
 <li>The <code>g(x)</code> function is the arctangent link function.</li>
+<li>The <code>g1(x)</code> function is the first derivative of
+<code>g()</code></li>
+<li>The <code>g2(x)</code> function is the second derivative of
+<code>g()</code></li>
 </ul>
 <div id="arguments-inputs" class="section level4">
 <h4>Arguments (inputs)</h4>
@@ -400,10 +404,12 @@ represented by the responsibilities of each component</li>
 <li><code>initBeta</code> is the initial parameter value of the overall
 <span class="math inline">\(\beta\)</span> parameter for each
 component.</li>
-<li><code>initBeta1</code> is the initial parameter value of the <span class="math inline">\(\beta\)</span> parameter for the circular
-(sine-cosine) covariates.</li>
-<li><code>initBeta2</code> is the initial parameter value of the <span class="math inline">\(\beta\)</span> parameter for the linear
-covariates.</li>
+<li><code>initBeta1</code> is a <span class="math inline">\(2q\times
+k\)</span> matrix of the initial parameter values of the regression
+parameters for the circular (sine-cosine) covariates.</li>
+<li><code>initBeta2</code> is a <span class="math inline">\(p\times
+k\)</span> matrix of the initial parameter values of the regression
+parameters for the linear covariates.</li>
 <li><code>initmu</code> is a <span class="math inline">\(k-\)</span>dimensional initial parameter vector of
 <span class="math inline">\(\mu\)</span>, the mean direction
 parameter</li>
